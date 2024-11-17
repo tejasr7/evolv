@@ -1,8 +1,3 @@
-# React + Vite
+# EVOLV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Our app is a unique blend of gaming and social networking, designed to bring people together in a fun and interactive way. Play engaging games, connect with friends, share moments, and even live stream your gameplay or experiences seamlessly. With a focus on community, entertainment, and security, our platform offers a vibrant space to compete, socialize, and create meaningful connections—all in one place.
