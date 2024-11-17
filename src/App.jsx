@@ -10,6 +10,32 @@ import Jobs from './pages/Jobs';
 import Contact from './pages/Contact';
 
 function App() {  
+
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("./api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Something went wrong");
+      }
+
+      setMessage("Email submitted successfully!");
+      setEmail("");
+    } catch (error) {
+      setMessage(error.message);
+    }
+  };
+
   return (
     <Router>
     <div className="container">
@@ -34,10 +60,11 @@ function App() {
       <main className='content'>
         <h2>「EVOLV」</h2>
       <p className="tagline">a new way forward!</p>
-      <form className="subscribe-form">
-        <input type="email" placeholder="enter your email here" required />
+      <form className="subscribe-form" onSubmit={handleSubmit}>
+        <input type="email" placeholder="enter your email here" required value={email} onChange={(e) => setEmail(e.target.value)} />
         <button type="submit">submit</button>
       </form>
+      {message && <p>{message}</p>}
       </main>
 
       <footer>
