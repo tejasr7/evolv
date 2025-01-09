@@ -17,7 +17,9 @@ function About() {
     </div>
     */}
 
-    Welcome to our innovative platform that combines social networking with the excitement of gaming. Our app bridges the gap between entertainment and connection, offering a vibrant community where you can:
+    <div>
+    <p>
+      Welcome to our innovative platform that combines social networking with the excitement of gaming. Our app bridges the gap between entertainment and connection, offering a vibrant community where you can:
 
 🎮 Play Games: Dive into engaging games and challenge your friends or other players worldwide.
 
@@ -31,7 +33,8 @@ Whether you're a gamer looking for new challenges or someone who enjoys connecti
 
 Join us today and redefine the way you game and socialize!
 
-
+      </p>
+  </div>
   );
 }
 
